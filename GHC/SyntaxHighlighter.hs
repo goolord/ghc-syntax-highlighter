@@ -297,7 +297,7 @@ classifyToken = \case
   L.ITconid _ -> ConstructorTok
   L.ITvarsym _ -> OperatorTok
   L.ITconsym _ -> OperatorTok
-  L.ITqvarid _ -> VariableTok
+  L.ITqvarid _ -> LabelTok
   L.ITqconid _ -> ConstructorTok
   L.ITqvarsym _ -> OperatorTok
   L.ITqconsym _ -> OperatorTok
