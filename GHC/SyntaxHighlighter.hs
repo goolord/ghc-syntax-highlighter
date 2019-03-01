@@ -49,6 +49,7 @@ data Token
   | PragmaTok          -- ^ Pragmas
   | SymbolTok          -- ^ Symbols (punctuation that is not an operator)
   | VariableTok        -- ^ Variable name (term level)
+  | LabelTok           -- ^ Label
   | ConstructorTok     -- ^ Data\/type constructor
   | OperatorTok        -- ^ Operator
   | CharTok            -- ^ Character
@@ -301,7 +302,7 @@ classifyToken = \case
   L.ITqvarsym _ -> OperatorTok
   L.ITqconsym _ -> OperatorTok
   L.ITdupipvarid _ -> VariableTok
-  L.ITlabelvarid _ -> VariableTok
+  L.ITlabelvarid _ -> LabelTok
   -- Basic types
   L.ITchar _ _ -> CharTok
   L.ITstring _ _ -> StringTok
