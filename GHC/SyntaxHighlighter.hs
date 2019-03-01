@@ -301,7 +301,7 @@ classifyToken = \case
   L.ITqconid _ -> ConstructorTok
   L.ITqvarsym _ -> OperatorTok
   L.ITqconsym _ -> OperatorTok
-  L.ITdupipvarid _ -> VariableTok
+  L.ITdupipvarid _ -> LabelTok
   L.ITlabelvarid _ -> LabelTok
   -- Basic types
   L.ITchar _ _ -> CharTok
